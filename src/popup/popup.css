@@ -466,9 +466,13 @@ button#connect:focus-visible,
     background 0.12s ease;
 }
 
-.footer a svg {
+/* SVG and GFG image */
+.footer a svg,
+.footer a img {
   width: 16px;
   height: 16px;
+  display: block;
+  object-fit: contain;
 }
 
 .footer a:hover {
@@ -480,6 +484,18 @@ button#connect:focus-visible,
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
+
+.footer a img {
+  width: 16px;
+  height: 16px;
+  display: block;
+  object-fit: contain;
+
+  filter: grayscale(1) brightness(0) saturate(100%)
+          invert(63%) sepia(8%) saturate(450%)
+          hue-rotate(175deg) brightness(90%);
+}
+
 
 /* =========================
    REDUCED MOTION
