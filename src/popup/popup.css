@@ -485,17 +485,21 @@ button#connect:focus-visible,
   outline-offset: 2px;
 }
 
+/* GFG logo - normal gray */
 .footer a img {
-  width: 16px;
-  height: 16px;
-  display: block;
-  object-fit: contain;
-
   filter: grayscale(1) brightness(0) saturate(100%)
-          invert(63%) sepia(8%) saturate(450%)
-          hue-rotate(175deg) brightness(90%);
+    invert(63%) sepia(8%) saturate(450%)
+    hue-rotate(175deg) brightness(90%);
+
+  transition: filter 0.12s ease;
 }
 
+/* GFG logo - hover green */
+.footer a:hover img {
+  filter: brightness(0) saturate(100%)
+    invert(62%) sepia(55%) saturate(650%)
+    hue-rotate(80deg) brightness(92%);
+}
 
 /* =========================
    REDUCED MOTION
